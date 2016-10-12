@@ -1,0 +1,15 @@
+
+<p id="notice"><%= notice %></p>
+ <a href="#" class="brand-logo">Logo</a>
+<p>
+  <strong>Name:</strong>
+  <%= @movie.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <img src="<%= @movie.image %>"width="250" height="250" margin-right:"10px">
+
+</p>
+
+<%= render partial: 'tickets/form' %>

@@ -1,0 +1,34 @@
+
+<p id="notice"><%= notice %></p>
+<!-- <h1>Movies</h1> -->
+<nav>
+   <div class="nav-wrapper">
+ <a href="#" class="brand-logo"></a>
+ </div>
+ </nav>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+<div class="row">
+    <% @movies.each do |movie| %>
+    <tr>
+        <td><%= link_to movie.name ,movie_path(movie.id), method: :get %></td>
+        <!-- <h3><%#= link_to movie.name , movie_path(movie.id) , method: :get %></h3> -->
+
+        <td><img src="<%= movie.image %>"width="200" height="200" margin-right:"10px"></td>
+
+
+
+        </div>
+
+<%  end %>
+</tbody>
+</table>
+<br>

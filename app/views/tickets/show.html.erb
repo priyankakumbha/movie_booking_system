@@ -1,0 +1,38 @@
+<!-- <h1>Tickets#show</h1>
+<p>Find me in app/views/tickets/show.html.erb</p> -->
+<p id="notice"><%= notice %></p>
+
+<!-- select seats from this page -->
+<div class="screen">
+  <h1>Front of cinema</h1>
+</div>
+
+<!-- <div class="seatPanel"></div> -->
+<div id="board-outer" class="center">
+
+      <table id="table" data-movie="<%=@ticket.movie.id%>" data-ticket="<%= @ticket.id%>">
+        <!-- Create the table using loops -->
+          <!-- If the seat are you are generating (row 1, column 1) has been booked in the database -->
+            <!-- Add the class of disabled -->
+
+            <% for i in 0..5 do %>
+              <tr class="row">
+            <% for j in 0..5 do %>
+            <% @currentSeat = "#{i}#{j}"%>
+            <%@isSeatAlreadyBooked= @allSelectedSeat.include?@currentSeat %>
+            <% if @isSeatAlreadyBooked %>
+              <td class="booked" id="column"+i style="color:black;"  ><%= i %><%= j %></td>
+                  <% else %>
+                  <td id="column"+i><%= i %><%= j %></td>
+            <% end %>
+            <% end %>
+            </tr>
+            <% end %>
+          </table>
+
+          <table class="seats">
+          <% @seats.each do |seat| %>
+          <tr class="seat-button"><td id="<%=seat.id%>">Seat</td</tr>
+          <% end %>
+          </table>
+        </div>
