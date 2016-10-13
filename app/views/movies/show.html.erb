@@ -1,15 +1,16 @@
 
 <p id="notice"><%= notice %></p>
- <a href="#" class="brand-logo">Logo</a>
+ <!-- <a href="#" class="brand-logo">Logo</a> -->
+<div class="eachMovie">
 <p>
-  <strong>Name:</strong>
-  <%= @movie.name %>
+  <!-- <strong>Name:</strong> -->
+  <div class="showName"><%= @movie.name %></div>
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <img src="<%= @movie.image %>"width="250" height="250" margin-right:"10px">
+  <!-- <strong>Image:</strong> -->
+<div class="showImage"><img src="<%= @movie.image %>"width="250" height="250" margin-right:"10px"></div>
 
 </p>
-
+</div>
 <%= render partial: 'tickets/form' %>

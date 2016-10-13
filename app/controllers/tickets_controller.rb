@@ -8,9 +8,6 @@ class TicketsController < ApplicationController
     @seats = @ticket.seats
      @myAllseats = Seat.all
      @allSelectedSeat = Seat.all.map{|seat| seat.seat_number}
-      #  puts "Hello >>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-     puts @allSelectedSeat.count
-
   end
 
   def new
@@ -24,13 +21,11 @@ class TicketsController < ApplicationController
     # user = @current_user
     ticket = Ticket.new(ticket_params)
     ticket.movie = @movie
-     @myAllseats = Seat.all
 
-     p @myAllseats.count
-    #  binding.pry
     respond_to do |format|
       if ticket.save
         number_of_seats = ticket.children + ticket.adults + ticket.students
+
         number_of_seats.times do
           Seat.create({:ticket_id => ticket.id})
         end
@@ -53,10 +48,11 @@ class TicketsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ticket_params
-      params.require(:ticket).permit(:adults, :children, :students)
+      params.require(:ticket).permit(:adults, :children, :students, :total)
     end
 
     def set_movie
       @movie = Movie.find(params[:movie_id])
     end
+
 end

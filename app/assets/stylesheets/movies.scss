@@ -2,17 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .brand-logo{
-  background-image: url("logo2.jpg");
-  height:65px;
-  width:80px;
+  // background-image: url("logo2.jpg");
+  // height:65px;
+  // width:80px;
   // border: 2px solid red;
-  margin-left: 10px;
+  margin-left: 40px;
   // background-color: black;
 }
 .nav-wrapper{
   background-color: black;
   // height:60px;
 }
+.movieName{
+  font-size: 15px;
+}
+tr{
+  width:50%;
+}
+.col.s12.m4.l4{
+    width:50%;
+}
 td{
-  font-size: 10px;
+  width:50%;
+}
+.movieDetails{
+  margin:20px 100px 20px 100px;
+position:relative;
+  width:250px;
+  height:auto;
+  border:2px solid red;
+  float:left;
+}
+.row{
+height:auto;
+width:300px;
+
+}
+.showName{
+  // float:right;
+  margin-right: 60px;
+}
+.showImage{
+
+}
+.eachMovie{
+  float:right;
+  height:300px;
+  width:300px;
 }

@@ -2,7 +2,7 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready(function() {
-
+calculateTotal();
   var bookSeat = function(seatId, seatNumber) {
     var postUrl = "/movies/" + movieId + "/tickets/" + ticketId + "/seats/" + seatId;
     $.ajax({
@@ -45,7 +45,25 @@ console.log("bye!!");
     }
   });
 
+  $( "#ticket_children" ).change(function() {
+    calculateTotal();
+  });
+
 });
+
+var calculateTotal= function(){
+  // console.log("hi");
+  var childrenTotal = parseInt($("#ticket_children").val());
+  var studentTotal = parseInt($("#ticket_students").val());
+  var adultTotal = parseInt( $("#ticket_adults").val());
+  var total1 = childrenTotal * 10;
+  var total2 = studentTotal * 12;
+  var total3 = adultTotal * 15;
+  var total = total1 + total2 + total3;
+  $("#ticket_total").val(total);
+  // console.log(total);
+  // console.log($("#ticket_children").val());
+};
 // <!-- <td id="column"+i style="background","black"><%#= i %><%= j %></td> -->
 //   <!-- $(this).css("background", "green").attr("disabled", true); -->
 // <!-- <%#= i %><%#= j %> -->
