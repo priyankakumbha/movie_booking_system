@@ -14,7 +14,8 @@
   // height:60px;
 }
 .movieName{
-  font-size: 15px;
+  font-size: 20px;
+  text-align: center;
 }
 tr{
   width:50%;
@@ -26,7 +27,7 @@ td{
   width:50%;
 }
 .movieDetails{
-  margin:20px 100px 20px 100px;
+  margin:20px 100px 20px ;
 position:relative;
   width:250px;
   height:auto;
@@ -47,6 +48,12 @@ width:300px;
 }
 .eachMovie{
   float:right;
-  height:300px;
+  height:400px;
   width:300px;
+}
+.movieIamge{
+  margin:20px 20px;
+}
+.movieLink{
+    margin:10px 40px;
 }

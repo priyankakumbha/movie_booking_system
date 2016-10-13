@@ -12,7 +12,7 @@
 <div class="movieDetails">
 <h6 class="movieName"><%= link_to movie.name ,movie_path(movie.id), method: :get %></h6>
 <div class="movieIamge"><img src="<%= movie.image %>"width="200" height="200" margin-right:"10px"></div>
-<%= link_to 'Book Now', movie_path(movie.id), method: :get,:class => "waves-effect waves-light btn" %>
+<div class="movieLink"><%= link_to 'Book Now', movie_path(movie.id), method: :get,:class => "waves-effect waves-light btn" %></div>
 </div>
 
 <!-- </div> -->
