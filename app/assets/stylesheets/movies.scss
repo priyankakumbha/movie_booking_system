@@ -27,11 +27,11 @@ td{
   width:50%;
 }
 .movieDetails{
-  margin:20px 100px 20px ;
+  margin:100px 100px 20px ;
 position:relative;
   width:250px;
   height:auto;
-  border:2px solid red;
+  border:2px solid #CC9752;
   float:left;
 }
 .row{
@@ -56,4 +56,7 @@ width:300px;
 }
 .movieLink{
     margin:10px 40px;
+}
+body{
+  // background-color: #CC9752;
 }
