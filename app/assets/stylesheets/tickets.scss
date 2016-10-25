@@ -51,6 +51,9 @@ h1{
 
   .seats {
     width: 100px;
+    float:right;
+    // margin-right: 90px;
+
   }
  .seats td {
    width: 100px;
@@ -76,4 +79,7 @@ h1{
 }
 .fieldLabel{
   color:pink;
+}
+.stripe-button-el{
+  margin:10px auto;
 }
