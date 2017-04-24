@@ -1,28 +1,26 @@
-== README
+Recipebook
+Click here to see live project https://myshowandmytime.herokuapp.com/
+Clone or Fork from here https://github.com/priyankakumbha/movie_booking_system
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Description
+It is the movie ticket booking application.User can choose movie from options,enter the number of members they are
+going to watch movie.It will calculate price and will display money in total section.
+As per number of members it will create number of seats, and user can choose only certain number of seats.
+Finally user can pay money.
 
-Things you may want to cover:
+User instructions
 
-* Ruby version
+Stripe credit card payment details:
 
-* System dependencies
+Email: anything@email.com
+Credit card: 4242 4242 4242 4242
+Expiry: Any future date [MM/YY]
+CVC: Any three digit code
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Technology Stack
+Ruby on Rails and PostgreSQL for back-end build and database
+jQuery library
+Stripe APIs
+Jquery Countdown plugin for timer
+Ruby, JavaScript, HTML5 and CSS3 as programming languages
+Heroku for cloud deployment
